@@ -1,0 +1,21 @@
+Source: securedrop-grsec
+Section: kernel
+Priority: optional
+Maintainer: SecureDrop Team <securedrop@freedom.press>
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.1
+Homepage: https://securedrop.org
+Vcs-Browser: https://github.com/freedomofpress/securedrop-grsec
+Vcs-Git: https://github.com/freedomofpress/securedrop-grsec
+Rules-Requires-Root: no
+
+Package: securedrop-grsec
+Architecture: all
+Depends: intel-microde,
+         linux-image-5.15.26-grsec-securedrop,
+         paxctld,
+         ${misc:Depends}
+Description: Metapackage with SecureDrop grsecurity-hardened kernel
+ Metapackage providing a grsecurity-patched Linux kernel for use with
+ SecureDrop. Depends on the most recently built patched kernel maintained
+ by FPF. Package also includes sysctl and PaX flags calls for GRUB.

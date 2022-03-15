@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+CURRENT_VERSION=5.15.26
+NEW_VERSION=
+
+.PHONY: update
+update:
+	@find ./ -type f ! -name 'changelog' -exec sed -i -e 's/$(CURRENT_VERSION)/$(NEW_VERSION)/g' {} \;
+	@dch --newversion=$(NEW_VERSION)~focal1 "Updating kernel to $(NEW_VERSION)" -D focal

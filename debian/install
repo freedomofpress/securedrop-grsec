@@ -1,0 +1,3 @@
+grub.d/* /etc/default/grub.d/
+paxctld.conf /opt/securedrop/
+sysctl.d/* /etc/sysctl.d/
