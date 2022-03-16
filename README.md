@@ -20,6 +20,7 @@ TODO: Document qubes bind-dirs configuration.
 $ gbp clone https://github.com/freedomofpress/securedrop-grsec
 $ cd securedrop-grsec
 $ export BUILDER=pbuilder
+$ DIST=focal git-pbuilder --update
 $ gbp buildpackage
 ```
 
